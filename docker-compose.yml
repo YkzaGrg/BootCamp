@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+    httpd:
+        container_name: desafio12
+        ports:
+            - 8080:80
+        volumes:
+            - webvol:/var/www/html/
+        image: webserver2:latest
+        restart: always
+
+volumes:
+    webvol:
+      external: true
+
+     
